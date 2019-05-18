@@ -22,7 +22,7 @@ class FCSqliteConnectionWithoutCredentials {
      */
     function loginForm() {
         $adminer = adminer();
-        echo '<div class="error">'.lang("Don't use it in a production environment!").'</div>';
+        echo '<div class="error">'.lang("Warning : don't use it in a production environment!").'</div>';
         echo "<table cellspacing='0' class='layout'>\n";
         echo '<input type="hidden" name="auth[driver]" value="sqlite">';
         echo $adminer->loginFormField('db', '<tr><th>' . lang('Database') . '<td>',
