@@ -2,7 +2,7 @@
 ## :us: Adminer plugin to login to a Sqlite3 database without credentials
 ### :construction: TODO
 ## :fr: Plug-in Adminer pour se connecter à une base de données Sqlite3 sans informations d'identification
-Ce plug-in pour l'application Web [Adminer](https://www.adminer.org/en/) permet de se « connecter » à une base de données [SQLite3](https://www.sqlite.org/index.html) sans avoir besoin de fournir d'informations d'identification (*credientials*).
+Ce plug-in pour l'application Web [Adminer](https://www.adminer.org/en/) permet de se « connecter à un serveur de bases de données [SQLite3](https://www.sqlite.org/index.html) » sans avoir besoin de fournir d'informations d'identification (*credientials*).
 
 > :warning: Ce plug-in ne doit pas être utilisé dans un environnement de production : 
 > * il donne accès à toutes les bases de base de données SQLite3 accessibles par l'instance du script PHP
