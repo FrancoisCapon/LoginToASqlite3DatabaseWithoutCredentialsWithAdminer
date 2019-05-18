@@ -17,6 +17,8 @@ Dossier | Script | Description
 ```./```|```adminer.php```|la version courante d'adminer
 ```./```|```index.php```|un « adminer » chargeant le plug-in
 
+![](./doc/adminer-sqlite3-plugin-component-diagram.png)
+
 ```php
 <?php 
 
@@ -27,9 +29,7 @@ function adminer_object() {
    require "./plugins/plugin.php";
    require "./plugins/fc-sqlite-connection-without-credentials.php";
 
-   $plugins = array(
-             new FCSqliteConnectionWithoutCredentials()
-    );
+   $plugins = array(new FCSqliteConnectionWithoutCredentials());
     
     return new AdminerPlugin($plugins);
 
