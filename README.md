@@ -1,5 +1,6 @@
 :fr: [fr](#fr-)
 ## :us: Adminer plugin to login to a Sqlite3 database without credentials
+:construction: TODO
 ## :fr: Plug-in Adminer pour se connecter à une base de données Sqlite3 sans informations d'identification
 Ce plug-in pour l'application Web [Adminer](https://www.adminer.org/en/) permet de se « connecter » à une base de données [SQLite3](https://www.sqlite.org/index.html) sans avoir besoin de fournir d'informations d'identification (*credientials*).
 
@@ -46,6 +47,6 @@ Il suffit de « s'authentifier » en cliquant sur le bouton Authentification en 
 
 ![Création d'une base SQLite3 avec Adminer](./doc/adminer-sqlite3-create-database-01.png)
 #### :arrow_forward: Authenfication sur base SQLite3 existante
-* La connexion s'effectue en indiquant le chemin « systeme de fichiers serveur » d'une base de données existante.
+* La connexion s'effectue en indiquant le chemin « système de fichiers serveur » d'une base de données existante.
 
 ![Connexion Adminer SQLite3](./doc/adminer-sqlite3-login-02.png)
