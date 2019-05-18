@@ -1,0 +1,1 @@
+# LoginToASqlite3DtabaseWithoutCredentialsWithAdminer
