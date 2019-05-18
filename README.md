@@ -1,4 +1,4 @@
-:fr: [fr](#fr-)
+:fr: [fr](#fr-plug-in-adminer-pour-se-connecter-%C3%A0-une-base-de-donn%C3%A9es-sqlite3-sans-informations-didentification)
 ## :us: Adminer plugin to login to a Sqlite3 database without credentials
 ### :construction: TODO
 ## :fr: Plug-in Adminer pour se connecter à une base de données Sqlite3 sans informations d'identification
