@@ -17,7 +17,8 @@ class FCSqliteConnectionWithoutCredentials {
     /**
     * Overwrite the Adminer::loginForm() method : Print login form
     *
-    * @uses Adminer::loginFormField(...) - Get login form field    
+    * @uses adminer() - Get Adminer object   
+    * @uses Adminer::loginFormField(...) - Get login form field        
     * @return return always true
      */
     function loginForm() {
