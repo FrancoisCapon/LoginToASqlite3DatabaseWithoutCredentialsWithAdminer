@@ -46,7 +46,6 @@ Simply "authenticate" by clicking on the Authentication button by indicating (or
 * The connection is made by specifying the "server file system" path of an existing database.
 
 ![Connexion Adminer SQLite3](./doc/adminer-sqlite3-existing-database.gif)
-### :construction: TODO use
 ## :fr: Plug-in Adminer pour se connecter à une base de données SQLite3 sans informations d'identification
 Ce plug-in pour l'application Web [Adminer](https://www.adminer.org/en/) permet de se « connecter à un serveur de bases de données [SQLite3](https://www.sqlite.org/index.html) » sans avoir besoin de fournir d'informations d'identification (*credentials*).
 
