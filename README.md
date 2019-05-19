@@ -4,20 +4,21 @@ This plugin for the Web application [Adminer] (https://www.adminer.org/en/) allo
 > :warning: This plugin should not be used in a production environment:
 > * it gives access to all the SQLite3 database databases accessible by the PHP script instance
 > * it allows you to create a SQLite3 database anywhere in the file system tree that can be accessed by the PHP script instance
-###: gear: Installing the plugin
+
+### :gear: Installing the plugin
 The plugin is used like any other [Adminer plugins] (https://www.adminer.org/en/plugins/), that is to say that it requires the following files:
 
 Folder | Script | Description
 :--|:--|:--
 ```./plugins```|```plugin.php```|the plugin base file
-```./plugins```|``fc-sqlite-connection-without-credentials.php```|the plugin itself
+```./plugins```|```fc-sqlite-connection-without-credentials.php```|the plugin itself
 ```./```|```adminer.php```|the current version of admin
-```./```|````index.php```|an "Adminer" loading the plugin
+```./```|```index.php```|an "Adminer" loading the plugin
 
-! [] (./ doc / Adminer-sqlite3-plugin-component-diagram.png)
+![component diagram : plugins for Adminer](./doc/adminer-sqlite3-plugin-component-diagram.png)
 
 ```php
-<? Php
+<?php
 
 // ./index.php
 
@@ -33,7 +34,7 @@ function adminer_object () {
 }
 
 require "./adminer.php";
-`` `
+```
 
 ### :construction: TODO
 ## :fr: Plug-in Adminer pour se connecter à une base de données SQLite3 sans informations d'identification
@@ -52,7 +53,7 @@ Dossier | Script | Description
 ```./```|```adminer.php```|la version courante d'adminer
 ```./```|```index.php```|un « adminer » chargeant le plug-in
 
-![](./doc/adminer-sqlite3-plugin-component-diagram.png)
+![diagramme de composant : plugins pour Adminer](./doc/adminer-sqlite3-plugin-component-diagram.png)
 
 ```php
 <?php 
