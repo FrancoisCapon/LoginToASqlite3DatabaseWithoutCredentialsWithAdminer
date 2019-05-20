@@ -11,28 +11,28 @@ Folder | Script | Description
 :--|:--|:--
 ```./plugins```|```plugin.php```|the plugin base file
 ```./plugins```|```fc-sqlite-connection-without-credentials.php```|the plugin itself
-```./```|```adminer.php```|the current version of admin
+```./```|```adminer-current.php```|the current version of admin
 ```./```|```adminer-4-sqlite3.php```|an "Adminer" loading the plugin
 
 ![component diagram : plugins for Adminer](./doc/adminer-sqlite3-plugin-component-diagram.png)
 
 ```php
-<?php
+<?php 
 
-// ./adminer-4-sqlite3.php
+// ./adminer-4-sqlite3
 
-function adminer_object () {
+function adminer_object() {
 
-    require "./plugins/plugin.php";
-    require "./plugins/fc-sqlite-connection-without-credentials.php";
-
-    $ plugins = array (new FCSqliteConnectionWithoutCredentials ());
-    
-    return new AdminerPlugin ($ plugins);
+   require "./plugins/fc-sqlite-connection-without-credentials.php";
+   require "./plugins/plugin.php";
+  
+   $plugins = array(new FCSqliteConnectionWithoutCredentials());
+    
+   return new AdminerPlugin($plugins);
 
 }
 
-require "./adminer.php";
+require "./adminer-current.php";
 ```
 ### :desktop_computer: Using Adminer with SQLite3 databases
 Simply "authenticate" by clicking on the Authentication button by indicating (or not) the path of an existing database.
@@ -59,7 +59,7 @@ Dossier | Script | Description
 :--|:--|:--
 ```./plugins```|```plugin.php```|le fichier de base des plug-ins
 ```./plugins```|```fc-sqlite-connection-without-credentials.php```|le plug-in lui-même
-```./```|```adminer.php```|la version courante d'adminer
+```./```|```adminer-current.php```|la version courante d'adminer
 ```./```|```adminer-4-sqlite3.php```|un « adminer » chargeant le plug-in
 
 ![diagramme de composant : plugins pour Adminer](./doc/adminer-sqlite3-plugin-component-diagram.png)
@@ -71,16 +71,16 @@ Dossier | Script | Description
 
 function adminer_object() {
 
-   require "./plugins/plugin.php";
    require "./plugins/fc-sqlite-connection-without-credentials.php";
-
+   require "./plugins/plugin.php";
+  
    $plugins = array(new FCSqliteConnectionWithoutCredentials());
     
    return new AdminerPlugin($plugins);
 
 }
 
-require "./adminer.php";
+require "./adminer-current.php";
 ```
 ### :desktop_computer: Utilisation d'Adminer avec des bases SQLite3
 Il suffit de « s'authentifier » en cliquant sur le bouton Authentification en indiquant (ou non) le chemin d'une base de donnée existante.
