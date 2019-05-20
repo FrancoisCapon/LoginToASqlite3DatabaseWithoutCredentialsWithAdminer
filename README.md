@@ -19,7 +19,7 @@ Folder | Script | Description
 ```php
 <?php 
 
-// ./adminer-4-sqlite3
+// ./adminer-4-sqlite3.php
 
 function adminer_object() {
 
@@ -67,7 +67,7 @@ Dossier | Script | Description
 ```php
 <?php 
 
-// ./adminer-4-sqlite3
+// ./adminer-4-sqlite3.php
 
 function adminer_object() {
 
