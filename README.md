@@ -14,7 +14,7 @@ Folder | Script | Description
 ```./```|```adminer-current.php```|the current version of admin
 ```./```|```adminer-4-sqlite3.php```|an "Adminer" loading the plugin
 
-![component diagram : plugins for Adminer](./doc/adminer-sqlite3-plugin-component-diagram.png)
+![UML component diagram : SQLite3 plugin for Adminer](./doc/adminer-sqlite3-plugin-uml-component-diagram.png)
 
 ```php
 <?php 
@@ -62,7 +62,7 @@ Dossier | Script | Description
 ```./```|```adminer-current.php```|la version courante d'adminer
 ```./```|```adminer-4-sqlite3.php```|un « adminer » chargeant le plug-in
 
-![diagramme de composant : plugins pour Adminer](./doc/adminer-sqlite3-plugin-component-diagram.png)
+![diagramme de composants UML : plugin SQLite3 pour Adminer](./doc/adminer-sqlite3-plugin-uml-component-diagram.png)
 
 ```php
 <?php 
