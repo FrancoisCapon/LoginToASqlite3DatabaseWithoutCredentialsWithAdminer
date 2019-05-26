@@ -11,7 +11,7 @@ Folder | Script | Description
 :--|:--|:--
 ```./plugins```|```plugin.php```|the plugin base file
 ```./plugins```|```fc-sqlite-connection-without-credentials.php```|the plugin itself
-```./```|```adminer-current.php```|the current version of admin
+```./```|```adminer-current.php```|the current version of adminer
 ```./```|```adminer-4-sqlite3.php```|an "Adminer" loading the plugin
 
 ![UML component diagram : SQLite3 plugin for Adminer](./doc/adminer-sqlite3-plugin-uml-component-diagram.png)
