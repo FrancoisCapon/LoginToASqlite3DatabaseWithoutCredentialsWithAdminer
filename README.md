@@ -35,7 +35,7 @@ function adminer_object() {
 require "./adminer-current.php";
 ```
 ### :gear: Build an admin-4-sqlite3 single-file version
-This script is used to build a SQLite3 "dedicated" SQLite3 admin file:
+This script is used to build a SQLite3 "dedicated" Adminer file:
 * easy installation (a file to copy)
 * respect the philosophy of Adminer
 > Adminer consist of a single file ready to deploy to the target server. 
