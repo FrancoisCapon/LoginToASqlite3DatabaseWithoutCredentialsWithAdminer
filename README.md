@@ -34,7 +34,7 @@ function adminer_object() {
 
 require "./adminer-current.php";
 ```
-### :gear: Build an admin-4-sqlite3 single-file version
+### :gear: or Build an admin-4-sqlite3 single-file version
 This script is used to build a SQLite3 "dedicated" Adminer file:
 * easy installation (a file to copy)
 * respect the philosophy of Adminer
@@ -110,7 +110,7 @@ function adminer_object() {
 
 require "./adminer-current.php";
 ```
-### :gear: Construire une version adminer-4-sqlite3 monofichier
+### :gear: ou Construire une version adminer-4-sqlite3 monofichier
 Ce script permet de construire un Adminer monofichier "dédié" SQLite3 :
 * installation facile (un fichier à copier)
 * respect la philosophie de Adminer
