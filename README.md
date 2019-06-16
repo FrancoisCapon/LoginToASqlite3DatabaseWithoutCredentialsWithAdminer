@@ -34,7 +34,7 @@ function adminer_object() {
 
 require "./adminer-current.php";
 ```
-### :gear: or Build an admin-4-sqlite3 single-file version
+### :gear: or Build single file version of adminer-4-sqlite3
 This script is used to build a SQLite3 "dedicated" Adminer file:
 * easy installation (a file to copy)
 * respect the philosophy of Adminer
@@ -60,7 +60,7 @@ function adminer_object() {
 EOPHP
 # remove all the <?php except the first
 # http://www.theunixschool.com/2011/02/sed-replace-or-substitute-file-contents.html
-sed -i '2,${s/<?php$//;}' adminer-4-sqilte3.php
+sed -i '2,$s/<?php$//' adminer-4-sqilte3.php
 ```
 ### :desktop_computer: Using Adminer with SQLite3 databases
 Simply "authenticate" by clicking on the Authentication button by indicating (or not) the path of an existing database.
@@ -136,7 +136,7 @@ function adminer_object() {
 EOPHP
 # remove all the <?php except the first
 # http://www.theunixschool.com/2011/02/sed-replace-or-substitute-file-contents.html
-sed -i '2,${s/<?php$//;}' adminer-4-sqilte3.php
+sed -i '2,$s/<?php$//' adminer-4-sqilte3.php
 ```
 ### :desktop_computer: Utilisation d'Adminer avec des bases SQLite3
 Il suffit de « s'authentifier » en cliquant sur le bouton Authentification en indiquant (ou non) le chemin d'une base de donnée existante.
