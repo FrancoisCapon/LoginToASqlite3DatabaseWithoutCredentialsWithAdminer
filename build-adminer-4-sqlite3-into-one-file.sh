@@ -19,4 +19,4 @@ function adminer_object() {
 EOPHP
 # remove all the <?php except the first
 # http://www.theunixschool.com/2011/02/sed-replace-or-substitute-file-contents.html 
-sed -i '2,${s/<?php$//;}' adminer-4-sqilte3.php
+sed -i '2,$s/<?php$//' adminer-4-sqilte3.php
