@@ -4,6 +4,8 @@ This plugin for the Web application [Adminer](https://www.adminer.org/en/) allow
 > * it gives access to all the SQLite3 databases accessible by the PHP script instance
 > * it allows you to create a SQLite3 database anywhere in the file system tree that can be accessed by the PHP script instance
 
+:medal_sports: This plugin is now in the official list of [User Contributed Plugins for Adminer](https://www.adminer.org/en/plugins/#user).
+
 ### :gear: Installing the plugin
 The plugin is used like any other [Adminer plugins](https://www.adminer.org/en/plugins/), that is to say that it requires the following files:
 
@@ -80,6 +82,9 @@ Ce plug-in pour l'application Web [Adminer](https://www.adminer.org/en/) permet 
 > :warning: Ce plug-in ne doit pas être utilisé dans un environnement de production : 
 > * il donne accès à toutes les bases de données SQLite3 accessibles par l'instance du script PHP
 > * il permet de créer une base de données SQLite3 n'importe où dans l'arborescence du système de fichiers qui accessible par l'instance du script PHP
+
+:medal_sports: Ce plugin est maintenant référencé dans la liste des [User Contributed Plugins for Adminer](https://www.adminer.org/en/plugins/#user).
+
 ### :gear: Installation du plug-in
 Le plug-in s'utilise comme n'importe quels autres [plug-ins de Adminer](https://www.adminer.org/en/plugins/), c'est-à-dire qu'il nécessite les fichiers suivants :
 
