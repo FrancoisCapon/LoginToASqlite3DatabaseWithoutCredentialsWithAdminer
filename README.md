@@ -6,7 +6,7 @@ This plugin for the Web application [Adminer](https://www.adminer.org/en/) allow
 
 :medal_sports: This plugin is now in the official list of [User Contributed Plugins for Adminer](https://www.adminer.org/en/plugins/#user).
 
-## :construction_worker: Install or :gear: Build or :robot: Use
+## :construction_worker: Install or :gear: Build or :new: :robot: Use :new:
 ### :construction_worker: Install the plugin
 The plugin is used like any other [Adminer plugins](https://www.adminer.org/en/plugins/), that is to say that it requires the following files:
 
@@ -67,7 +67,7 @@ EOPHP
 sed -i '2,$s/<?php$//' adminer-4-sqlite3.php
 ```
 
-### :robot: Use the [latest prebuilded release](https://github.com/FrancoisCapon/LoginToASqlite3DatabaseWithoutCredentialsWithAdminer/releases/latest)
+### :new: :robot: Use the [latest prebuilded release](https://github.com/FrancoisCapon/LoginToASqlite3DatabaseWithoutCredentialsWithAdminer/releases/latest) :new:
 
 ## :desktop_computer: Using Adminer with SQLite3 databases
 Simply "authenticate" by clicking on the Authentication button by indicating (or not) the path of an existing database.
@@ -90,7 +90,7 @@ Ce plug-in pour l'application Web [Adminer](https://www.adminer.org/en/) permet 
 
 :medal_sports: Ce plugin est maintenant référencé dans la liste des [User Contributed Plugins for Adminer](https://www.adminer.org/en/plugins/#user).
 
-## :construction_worker: Installer ou :gear: Construire ou :robot: Utiliser
+## :construction_worker: Installer ou :gear: Construire ou :new: :robot: Utiliser :new:
 
 ### :construction_worker: Installer le plug-in
 Le plug-in s'utilise comme n'importe quels autres [plug-ins de Adminer](https://www.adminer.org/en/plugins/), c'est-à-dire qu'il nécessite les fichiers suivants :
@@ -151,7 +151,7 @@ EOPHP
 sed -i '2,$s/<?php$//' adminer-4-sqlite3.php
 ```
 
-### :robot: Utiliser la [dernière version pré-construite](https://github.com/FrancoisCapon/LoginToASqlite3DatabaseWithoutCredentialsWithAdminer/releases/latest)
+### :new: :robot: Utiliser la [dernière version pré-construite](https://github.com/FrancoisCapon/LoginToASqlite3DatabaseWithoutCredentialsWithAdminer/releases/latest) :new:
 
 ## :desktop_computer: Utilisation d'Adminer avec des bases SQLite3
 Il suffit de « s'authentifier » en cliquant sur le bouton Authentification en indiquant (ou non) le chemin d'une base de donnée existante.
