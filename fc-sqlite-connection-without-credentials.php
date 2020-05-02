@@ -34,7 +34,7 @@ class FCSqliteConnectionWithoutCredentials {
     }
 
     /**
-    * Overwrite the Adminer::login(string $login, string $password) method : Authorize the user
+    * Overwrite the Adminer::login(string $login, string $password) method: Authorize the user
     *
     * @return return always true
      */
