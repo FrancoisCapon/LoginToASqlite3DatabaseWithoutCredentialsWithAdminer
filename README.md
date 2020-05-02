@@ -6,7 +6,8 @@ This plugin for the Web application [Adminer](https://www.adminer.org/en/) allow
 
 :medal_sports: This plugin is now in the official list of [User Contributed Plugins for Adminer](https://www.adminer.org/en/plugins/#user).
 
-### :gear: Installing the plugin
+## :construction_worker:Install or :gear:Build or :robot:Use
+### :construction_worker: Install the plugin
 The plugin is used like any other [Adminer plugins](https://www.adminer.org/en/plugins/), that is to say that it requires the following files:
 
 Folder | Script | Description
@@ -36,7 +37,9 @@ function adminer_object() {
 
 require "./adminer-current.php";
 ```
-### :gear: or Build single file version of adminer-4-sqlite3
+or 
+
+### :gear: Build single file version of adminer-4-sqlite3
 This script is used to build a SQLite3 "dedicated" Adminer file:
 * easy installation (a file to copy)
 * respect the philosophy of Adminer
@@ -64,7 +67,11 @@ EOPHP
 # http://www.theunixschool.com/2011/02/sed-replace-or-substitute-file-contents.html
 sed -i '2,$s/<?php$//' adminer-4-sqlite3.php
 ```
-### :desktop_computer: Using Adminer with SQLite3 databases
+or
+
+### :robot: Use the [latest prebuilded release](./releases/latest)
+
+## :desktop_computer: Using Adminer with SQLite3 databases
 Simply "authenticate" by clicking on the Authentication button by indicating (or not) the path of an existing database.
 
 #### :arrow_forward: Authenfication to create a new SQLite3 database
