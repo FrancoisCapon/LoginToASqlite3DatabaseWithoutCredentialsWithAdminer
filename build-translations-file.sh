@@ -1,4 +1,4 @@
-translationsFile="warning.translations.csv"
+translationsFile="warning-translations.csv"
 rm $translationsFile
 touch $translationsFile
 for file in adminer/adminer/lang/*
