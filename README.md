@@ -92,19 +92,15 @@ fc-sqlite-connection-without-credentials.php 100%[==============================
 
 2020-11-11 13:06:18 (7,81 MB/s) - «adminer/plugins/fc-sqlite-connection-without-credentials.php» enregistré [1509/1509]
 
-
 3. Adding the plugin to the sources
 
-
 4. Search warning translation
-
 
 5. Compile in language: en
 
 adminer-4.7.7-sqlite-en.php created (191343 B).
 
 6. Clean the sources
-
 
 7. Voilà!
 ```
@@ -118,13 +114,11 @@ Attention : ne l\'utilisez pas dans un environnement de production !
 
 2. Set the design: flat
 
-
 3. Compile in language: fr
 
 adminer-4.7.7-sqlite-fr.php created (193736 B).
 
 4. Clean the sources
-
 
 5. Voilà!
 
@@ -153,7 +147,7 @@ Ce plug-in pour l'application Web [Adminer](https://www.adminer.org/en/) permet 
 
 :medal_sports: Ce plugin est maintenant référencé dans la liste des [User Contributed Plugins for Adminer](https://www.adminer.org/en/plugins/#user).
 
-## :construction_worker: Installer ou :gear: Construire ou :new: :robot: Utiliser :new:
+## :construction_worker: Installer ou :new: :gear: Compiler ou :robot: Utiliser
 
 ### :construction_worker: Installer le plug-in
 Le plug-in s'utilise comme n'importe quels autres [plug-ins de Adminer](https://www.adminer.org/en/plugins/), c'est-à-dire qu'il nécessite les fichiers suivants :
@@ -185,36 +179,91 @@ function adminer_object() {
 
 require "./adminer-current.php";
 ```
-### :gear: Construire une version adminer-4-sqlite3 monofichier
-Ce script permet de construire un Adminer monofichier "dédié" SQLite3 :
+### :new: :gear: Compiler une version monofichier
+Ce script permet de *compiler* un Adminer monofichier "dédié" SQLite3 :
 * installation facile (un fichier à copier)
+* faible taille (< 190Ko)
+* peut intégrer votre design favori
 * respect la philosophie de Adminer
 > Adminer consist of a single file ready to deploy to the target server. 
-```bash
-#!/usr/bin/env bash
 
-# define the URLs
-ADMINER=https://www.adminer.org/latest.php
-PLUGIN=https://raw.github.com/vrana/adminer/master/plugins/plugin.php
-MYPLUGIN=https://github.com/FrancoisCapon/LoginToASqlite3DatabaseWithoutCredentialsWithAdminer/raw/master/fc-sqlite-connection-without-credentials.php
-# load and concatenate into one file
-wget -O adminer-4-sqlite3.php $ADMINER $PLUGIN $MYPLUGIN
+### Examples d'utilisation
+* Comment l'utiliser
+```
+> ./compile.sh
+usage: ./compile.sh languagecode [design]
+```
+* Première utilisation
+```
+> ./compile.sh en
+1. Load adminer's sources:
 
-# add myplugin to Adminer
-# http://tldp.org/LDP/abs/html/here-docs.html#EX71C
-cat << "EOPHP" >> adminer-4-sqlite3.php
+Clonage dans 'adminer'...
+remote: Enumerating objects: 22712, done.
+remote: Total 22712 (delta 0), reused 0 (delta 0), pack-reused 22712
+Réception d'objets: 100% (22712/22712), 7.81 MiB | 3.55 MiB/s, fait.
+Résolution des deltas: 100% (16486/16486), fait.
+Sous-module 'JsShrink' (git://github.com/vrana/JsShrink) enregistré pour le chemin 'externals/JsShrink'
+Sous-module 'jush' (git://github.com/vrana/jush) enregistré pour le chemin 'externals/jush'
+Clonage dans '/home/francois/adminer/compile/adminer/externals/JsShrink'...
+remote: Enumerating objects: 55, done.        
+remote: Total 55 (delta 0), reused 0 (delta 0), pack-reused 55        
+Réception d'objets: 100% (55/55), 116.93 KiB | 410.00 KiB/s, fait.
+Résolution des deltas: 100% (11/11), fait.
+Clonage dans '/home/francois/adminer/compile/adminer/externals/jush'...
+remote: Enumerating objects: 1231, done.        
+remote: Total 1231 (delta 0), reused 0 (delta 0), pack-reused 1231        
+Réception d'objets: 100% (1231/1231), 806.41 KiB | 358.00 KiB/s, fait.
+Résolution des deltas: 100% (854/854), fait.
+Chemin de sous-module 'externals/JsShrink' : '17cbfacae67dede6d94d94ce92214c8ca31d858e' extrait
+Chemin de sous-module 'externals/jush' : '275c9cc888608f36895e3926c16e8d2e2dab0a1c' extrait
 
-function adminer_object() {
-    $plugins = array(new FCSqliteConnectionWithoutCredentials());
-    return new AdminerPlugin($plugins);
-}
-EOPHP
-# remove all the <?php except the first
-# http://www.theunixschool.com/2011/02/sed-replace-or-substitute-file-contents.html
-sed -i '2,$s/<?php$//' adminer-4-sqlite3.php
+2. Load plugin's sources:
+
+--2020-11-11 13:06:17--  https://raw.githubusercontent.com/FrancoisCapon/LoginToASqlite3DatabaseWithoutCredentialsWithAdminer/master/fc-sqlite-connection-without-credentials.php
+Résolution de raw.githubusercontent.com (raw.githubusercontent.com)… 151.101.120.133
+Connexion à raw.githubusercontent.com (raw.githubusercontent.com)|151.101.120.133|:443… connecté.
+requête HTTP transmise, en attente de la réponse… 200 OK
+Taille : 1509 (1,5K) [text/plain]
+Enregistre : «adminer/plugins/fc-sqlite-connection-without-credentials.php»
+
+fc-sqlite-connection-without-credentials.php 100%[===========================================================================================>]   1,47K  --.-KB/s    ds 0s      
+
+2020-11-11 13:06:18 (7,81 MB/s) - «adminer/plugins/fc-sqlite-connection-without-credentials.php» enregistré [1509/1509]
+
+3. Adding the plugin to the sources
+
+4. Search warning translation
+
+5. Compile in language: en
+
+adminer-4.7.7-sqlite-en.php created (191343 B).
+
+6. Clean the sources
+
+7. Voilà!
+```
+* Utilisation suivante
+```
+> ./compile.sh fr flat
+
+1. Search warning translation
+
+Attention : ne l\'utilisez pas dans un environnement de production !
+
+2. Set the design: flat
+
+3. Compile in language: fr
+
+adminer-4.7.7-sqlite-fr.php created (193736 B).
+
+4. Clean the sources
+
+5. Voilà!
+
 ```
 
-### :new: :robot: Utiliser la [dernière version pré-construite](https://github.com/FrancoisCapon/LoginToASqlite3DatabaseWithoutCredentialsWithAdminer/releases/latest) :new:
+### :new: :robot: Utiliser la [dernière version pré-compliée](https://github.com/FrancoisCapon/LoginToASqlite3DatabaseWithoutCredentialsWithAdminer/releases/latest) :new:
 
 ## :desktop_computer: Utilisation d'Adminer avec des bases SQLite3
 Il suffit de « s'authentifier » en cliquant sur le bouton Authentification en indiquant (ou non) le chemin d'une base de donnée existante.
