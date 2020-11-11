@@ -6,7 +6,7 @@ This plugin for the Web application [Adminer](https://www.adminer.org/en/) allow
 
 :medal_sports: This plugin is now in the official list of [User Contributed Plugins for Adminer](https://www.adminer.org/en/plugins/#user).
 
-## :construction_worker: Install or :gear: Build or :new: :robot: Use :new:
+## :construction_worker: Install or :new: :gear: Compile or :robot: Use
 ### :construction_worker: Install the plugin
 The plugin is used like any other [Adminer plugins](https://www.adminer.org/en/plugins/), that is to say that it requires the following files:
 
@@ -38,36 +38,94 @@ function adminer_object() {
 require "./adminer-current.php";
 ```
 
-### :gear: Build single file version of adminer-4-sqlite3
+### :new: :gear: Compile a single file version
 This script is used to build a SQLite3 "dedicated" Adminer file:
 * easy installation (a file to copy)
+* light size (< 190Ko)
+* can embedded your favorite design
 * respect the philosophy of Adminer
 > Adminer consist of a single file ready to deploy to the target server. 
 ```bash
-#!/usr/bin/env bash
+if [ $# -lt 1 ]
+then
+	echo 'usage: ./compile.sh languagecode [design]'
+	exit 1
+fi
 
-# define the URLs
-ADMINER=https://www.adminer.org/latest.php
-PLUGIN=https://raw.github.com/vrana/adminer/master/plugins/plugin.php
-MYPLUGIN=https://github.com/FrancoisCapon/LoginToASqlite3DatabaseWithoutCredentialsWithAdminer/raw/master/fc-sqlite-connection-without-credentials.php
-# load and concatenate into one file
-wget -O adminer-4-sqlite3.php $ADMINER $PLUGIN $MYPLUGIN
+LANGUAGES_DIR="adminer/adminer/lang"
+TRANSLATIONS_FILE="warning-translations.csv" 
+CSS_FILE="adminer/adminer/static/default.css"
+DESIGNS_DIR="adminer/designs"
+COMPILE_CMD="php adminer/compile.php sqlite "
 
-# add myplugin to Adminer
-# http://tldp.org/LDP/abs/html/here-docs.html#EX71C
-cat << "EOPHP" >> adminer-4-sqlite3.php
+step=1
+if [ ! -d "adminer" ]
+then
+echo -e "\n$step. Load adminer's sources:\n"
+((step+=1))
 
+git clone --recurse-submodules https://github.com/vrana/adminer.git
+echo -e "\n$step. Load plugin's sources:\n"
+((step+=1))
+wget -P adminer/plugins/ https://raw.githubusercontent.com/FrancoisCapon/LoginToASqlite3DatabaseWithoutCredentialsWithAdminer/master/fc-sqlite-connection-without-credentials.php
+echo -e "\n$step. Adding the plugin to the sources\n"
+((step+=1))
+cat << "EOPHP" >> adminer/adminer/include/bootstrap.inc.php
+include "../plugins/plugin.php";
+include "../plugins/fc-sqlite-connection-without-credentials.php";
 function adminer_object() {
-    $plugins = array(new FCSqliteConnectionWithoutCredentials());
-    return new AdminerPlugin($plugins);
-}
+	$plugins = array(new FCSqliteConnectionWithoutCredentials()); 
+	return new AdminerPlugin($plugins);
+ }
 EOPHP
-# remove all the <?php except the first
-# http://www.theunixschool.com/2011/02/sed-replace-or-substitute-file-contents.html
-sed -i '2,$s/<?php$//' adminer-4-sqlite3.php
+fi
+
+echo -e "\n$step. Search warning translation\n"
+((step+=1))
+
+language=$1
+translation=$(grep ^$language, $TRANSLATIONS_FILE | cut -d',' -f2 | tr -d '\n')
+if [ "$translation" != "" ]
+then 
+	echo $translation
+	cp $LANGUAGES_DIR/$language.inc.php $LANGUAGES_DIR/$language.inc.php.backup
+	sed -i 's/);//' $LANGUAGES_DIR/$language.inc.php
+	cat << EOPHP >> $LANGUAGES_DIR/$language.inc.php
+	'Warning: don\'t use it in a production environment!' => '$translation',
+);
+EOPHP
+fi
+
+if [ $# -eq 2 ]
+then
+design=$2
+echo -e "\n$step. Set the design: $design\n"
+((step+=1))
+	cp $CSS_FILE $CSS_FILE.backup
+	cat $CSS_FILE.backup $DESIGNS_DIR/$design/adminer.css > $CSS_FILE
+fi
+
+echo -e "\n$step. Compile in language: $language\n"
+((step+=1))
+
+$COMPILE_CMD $language 2> /dev/null
+
+echo -e "\n$step. Clean the sources\n"
+((step+=1))
+if [ "$translation" != "" ]
+then
+	cp $LANGUAGES_DIR/$language.inc.php.backup $LANGUAGES_DIR/$language.inc.php
+fi
+
+if [ $# -eq 2 ]
+then
+	cp $CSS_FILE.backup $CSS_FILE
+fi
+
+echo -e "\n$step. Voilà!\n"
 ```
 
-### :new: :robot: Use the [latest prebuilded release](https://github.com/FrancoisCapon/LoginToASqlite3DatabaseWithoutCredentialsWithAdminer/releases/latest) :new:
+### :robot: Use the [latest prebuilded release](https://github.com/FrancoisCapon/LoginToASqlite3DatabaseWithoutCredentialsWithAdminer/releases/latest)
 
 ## :desktop_computer: Using Adminer with SQLite3 databases
 Simply "authenticate" by clicking on the Authentication button by indicating (or not) the path of an existing database.
