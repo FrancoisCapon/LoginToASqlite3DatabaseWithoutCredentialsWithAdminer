@@ -263,7 +263,7 @@ adminer-4.7.7-sqlite-fr.php created (193736 B).
 
 ```
 
-### :new: :robot: Utiliser la [dernière version pré-compliée](https://github.com/FrancoisCapon/LoginToASqlite3DatabaseWithoutCredentialsWithAdminer/releases/latest) :new:
+### :robot: Utiliser la [dernière version pré-compliée](https://github.com/FrancoisCapon/LoginToASqlite3DatabaseWithoutCredentialsWithAdminer/releases/latest) 
 
 ## :desktop_computer: Utilisation d'Adminer avec des bases SQLite3
 Il suffit de « s'authentifier » en cliquant sur le bouton Authentification en indiquant (ou non) le chemin d'une base de donnée existante.
