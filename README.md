@@ -50,12 +50,12 @@ This script is used to *compile* a SQLite3 "dedicated" Adminer file:
 
 ### Examples of usage
 * How to use it
-```bash
+```
 > ./compile.sh
 usage: ./compile.sh languagecode [design]
 ```
 * First usage
-```bash
+```
 > ./compile.sh en
 1. Load adminer's sources:
 
@@ -109,7 +109,7 @@ adminer-4.7.7-sqlite-en.php created (191343 B).
 7. Voilà!
 ```
 * Next usage
-```bash
+```
 > ./compile.sh fr flat
 
 1. Search warning translation
