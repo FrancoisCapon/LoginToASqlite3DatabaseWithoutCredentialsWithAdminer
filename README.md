@@ -48,7 +48,7 @@ This script is used to *compile* a SQLite3 "dedicated" Adminer file:
 
 :memo: You can contribute by filling the warning translations file (`warning-translations.csv`)
 
-### examples of usage
+### Examples of usage
 
 ```bash
 > ./compile.sh
@@ -125,9 +125,7 @@ adminer-4.7.7-sqlite-fr.php created (193736 B).
 
 ```
 
-
-
-### :robot: Use the [latest prebuilded release](https://github.com/FrancoisCapon/LoginToASqlite3DatabaseWithoutCredentialsWithAdminer/releases/latest)
+### :robot: Use the [latest compiled releases](https://github.com/FrancoisCapon/LoginToASqlite3DatabaseWithoutCredentialsWithAdminer/releases/latest)
 
 ## :desktop_computer: Using Adminer with SQLite3 databases
 Simply "authenticate" by clicking on the Authentication button by indicating (or not) the path of an existing database.
