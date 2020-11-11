@@ -39,12 +39,88 @@ require "./adminer-current.php";
 ```
 
 ### :new: :gear: Compile a single file version
-This script is used to build a SQLite3 "dedicated" Adminer file:
+This script is used to *compile* a SQLite3 "dedicated" Adminer file:
 * easy installation (a file to copy)
 * light size (< 190Ko)
 * can embedded your favorite design
 * respect the philosophy of Adminer
-> Adminer consist of a single file ready to deploy to the target server. 
+> Adminer consist of a single file ready to deploy to the target server.
+
+:memo: You can contribute by filling the warning translations file.
+
+```bash
+> ./compile.sh en
+1. Load adminer's sources:
+
+Clonage dans 'adminer'...
+remote: Enumerating objects: 22712, done.
+remote: Total 22712 (delta 0), reused 0 (delta 0), pack-reused 22712
+Réception d'objets: 100% (22712/22712), 7.81 MiB | 3.55 MiB/s, fait.
+Résolution des deltas: 100% (16486/16486), fait.
+Sous-module 'JsShrink' (git://github.com/vrana/JsShrink) enregistré pour le chemin 'externals/JsShrink'
+Sous-module 'jush' (git://github.com/vrana/jush) enregistré pour le chemin 'externals/jush'
+Clonage dans '/home/francois/adminer/compile/adminer/externals/JsShrink'...
+remote: Enumerating objects: 55, done.        
+remote: Total 55 (delta 0), reused 0 (delta 0), pack-reused 55        
+Réception d'objets: 100% (55/55), 116.93 KiB | 410.00 KiB/s, fait.
+Résolution des deltas: 100% (11/11), fait.
+Clonage dans '/home/francois/adminer/compile/adminer/externals/jush'...
+remote: Enumerating objects: 1231, done.        
+remote: Total 1231 (delta 0), reused 0 (delta 0), pack-reused 1231        
+Réception d'objets: 100% (1231/1231), 806.41 KiB | 358.00 KiB/s, fait.
+Résolution des deltas: 100% (854/854), fait.
+Chemin de sous-module 'externals/JsShrink' : '17cbfacae67dede6d94d94ce92214c8ca31d858e' extrait
+Chemin de sous-module 'externals/jush' : '275c9cc888608f36895e3926c16e8d2e2dab0a1c' extrait
+
+2. Load plugin's sources:
+
+--2020-11-11 13:06:17--  https://raw.githubusercontent.com/FrancoisCapon/LoginToASqlite3DatabaseWithoutCredentialsWithAdminer/master/fc-sqlite-connection-without-credentials.php
+Résolution de raw.githubusercontent.com (raw.githubusercontent.com)… 151.101.120.133
+Connexion à raw.githubusercontent.com (raw.githubusercontent.com)|151.101.120.133|:443… connecté.
+requête HTTP transmise, en attente de la réponse… 200 OK
+Taille : 1509 (1,5K) [text/plain]
+Enregistre : «adminer/plugins/fc-sqlite-connection-without-credentials.php»
+
+fc-sqlite-connection-without-credentials.php 100%[===========================================================================================>]   1,47K  --.-KB/s    ds 0s      
+
+2020-11-11 13:06:18 (7,81 MB/s) - «adminer/plugins/fc-sqlite-connection-without-credentials.php» enregistré [1509/1509]
+
+
+3. Adding the plugin to the sources
+
+
+4. Search warning translation
+
+
+5. Compile in language: en
+
+adminer-4.7.7-sqlite-en.php created (191343 B).
+
+6. Clean the sources
+
+
+7. Voilà!
+
+> ./compile.sh fr flat
+
+1. Search warning translation
+
+Attention : ne l\'utilisez pas dans un environnement de production !
+
+2. Set the design: flat
+
+
+3. Compile in language: fr
+
+adminer-4.7.7-sqlite-fr.php created (193736 B).
+
+4. Clean the sources
+
+
+5. Voilà!
+
+```
+
 ```bash
 if [ $# -lt 1 ]
 then
