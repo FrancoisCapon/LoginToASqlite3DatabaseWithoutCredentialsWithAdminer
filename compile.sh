@@ -17,7 +17,7 @@ echo -e "\n$step. Load adminer's sources:\n"
 ((step+=1))
 
 git clone --recurse-submodules https://github.com/vrana/adminer.git
-echo -e "\n$step. Load plugin's sources:\n"
+echo -e "\n$step. Load plugin code:\n"
 ((step+=1))
 wget -P adminer/plugins/ https://raw.githubusercontent.com/FrancoisCapon/LoginToASqlite3DatabaseWithoutCredentialsWithAdminer/master/fc-sqlite-connection-without-credentials.php
 echo -e "\n$step. Adding the plugin to the sources\n"
