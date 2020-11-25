@@ -79,7 +79,7 @@ Résolution des deltas: 100% (854/854), fait.
 Chemin de sous-module 'externals/JsShrink' : '17cbfacae67dede6d94d94ce92214c8ca31d858e' extrait
 Chemin de sous-module 'externals/jush' : '275c9cc888608f36895e3926c16e8d2e2dab0a1c' extrait
 
-2. Load plugin's sources:
+2. Load plugin code:
 
 --2020-11-11 13:06:17--  https://raw.githubusercontent.com/FrancoisCapon/LoginToASqlite3DatabaseWithoutCredentialsWithAdminer/master/fc-sqlite-connection-without-credentials.php
 Résolution de raw.githubusercontent.com (raw.githubusercontent.com)… 151.101.120.133
@@ -218,7 +218,7 @@ Résolution des deltas: 100% (854/854), fait.
 Chemin de sous-module 'externals/JsShrink' : '17cbfacae67dede6d94d94ce92214c8ca31d858e' extrait
 Chemin de sous-module 'externals/jush' : '275c9cc888608f36895e3926c16e8d2e2dab0a1c' extrait
 
-2. Load plugin's sources:
+2. Load plugin code:
 
 --2020-11-11 13:06:17--  https://raw.githubusercontent.com/FrancoisCapon/LoginToASqlite3DatabaseWithoutCredentialsWithAdminer/master/fc-sqlite-connection-without-credentials.php
 Résolution de raw.githubusercontent.com (raw.githubusercontent.com)… 151.101.120.133
