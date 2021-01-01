@@ -17,6 +17,12 @@ echo -e "\n$step. Load adminer's sources:\n"
 ((step+=1))
 
 git clone --recurse-submodules https://github.com/vrana/adminer.git
+
+# version 4.7.9-dev => 4.7.8
+# cd adminer
+# git reset --hard 190146672f6ce9b8f08af2d7e7a5e8f768d32ee6
+# cd ..
+
 echo -e "\n$step. Load plugin code:\n"
 ((step+=1))
 wget -P adminer/plugins/ https://raw.githubusercontent.com/FrancoisCapon/LoginToASqlite3DatabaseWithoutCredentialsWithAdminer/master/fc-sqlite-connection-without-credentials.php
