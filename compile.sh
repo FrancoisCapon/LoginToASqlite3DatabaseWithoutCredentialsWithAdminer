@@ -35,8 +35,6 @@ fi
 echo -e "\n$step. Search warning translation\n"
 ((step+=1))
 
-# TODO echo '<div class="error">'.lang('Warning: don\'t use it in a production environment!').'</div>';
-
 language=$1
 translation=$(grep ^$language, $TRANSLATIONS_FILE | cut -d',' -f2 | tr -d '\n')
 if [ "$translation" != "" ]
