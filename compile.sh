@@ -8,7 +8,12 @@ LANGUAGES_DIR="adminer/adminer/lang"
 TRANSLATIONS_FILE="warning-translations.csv" 
 CSS_FILE="adminer/adminer/static/default.css"
 DESIGNS_DIR="adminer/designs"
-COMPILE_CMD="php adminer/compile.php sqlite "
+# COMPILE_CMD="../php-80/php adminer/compile.php sqlite"
+COMPILE_CMD="../php-74/php adminer/compile.php sqlite"
+# COMMIT_VERSION="190146672f6ce9b8f08af2d7e7a5e8f768d32ee6" # 4.7.8
+# 4.8.1-dev SQLite: Fix displayed types (bug #784, regression from 4.8.0)
+# https://github.com/vrana/adminer/commit/7f8c93a6f1e564ee4a9eb81cc89a3a9a6581a667
+COMMIT_VERSION="7f8c93a6f1e564ee4a9eb81cc89a3a9a6581a667" # 4.8.1-dev
 
 step=1
 if [ ! -d "adminer" ]
@@ -18,24 +23,29 @@ echo -e "\n$step. Load adminer's sources:\n"
 
 git clone --recurse-submodules https://github.com/vrana/adminer.git
 
-# version 4.7.9-dev => 4.7.8
-# cd adminer
-# git reset --hard 190146672f6ce9b8f08af2d7e7a5e8f768d32ee6
-# cd ..
+cd adminer
+git reset --hard $COMMIT_VERSION
+cd ..
 
 echo -e "\n$step. Load plugin code:\n"
 ((step+=1))
-wget -P adminer/plugins/ https://raw.githubusercontent.com/FrancoisCapon/LoginToASqlite3DatabaseWithoutCredentialsWithAdminer/master/fc-sqlite-connection-without-credentials.php
+# wget -P adminer/plugins/ https://raw.githubusercontent.com/FrancoisCapon/LoginToASqlite3DatabaseWithoutCredentialsWithAdminer/master/fc-sqlite-connection-without-credentials.php
+curl -o adminer/plugins/fc-sqlite-connection-without-credentials.php https://raw.githubusercontent.com/FrancoisCapon/LoginToASqlite3DatabaseWithoutCredentialsWithAdminer/master/fc-sqlite-connection-without-credentials.php
 echo -e "\n$step. Adding the plugin to the sources\n"
 ((step+=1))
-cat << "EOPHP" >> adminer/adminer/include/bootstrap.inc.php
+cp adminer/adminer/include/bootstrap.inc.php adminer/adminer/include/vrana-bootstrap.inc.php
+cat << "EOPHP" >> adminer/adminer/include/fc-bootstrap.inc.php
+<?php
+$_GET['sqlite']=''; // needed for 4.8.1
 include "../plugins/plugin.php";
 include "../plugins/fc-sqlite-connection-without-credentials.php";
 function adminer_object() {
 	$plugins = array(new FCSqliteConnectionWithoutCredentials()); 
 	return new AdminerPlugin($plugins);
- }
+}
 EOPHP
+cat adminer/adminer/include/fc-bootstrap.inc.php adminer/adminer/include/vrana-bootstrap.inc.php > adminer/adminer/include/bootstrap.inc.php
+sed -i '2,$s/<?php$//' adminer/adminer/include/bootstrap.inc.php
 fi
 
 echo -e "\n$step. Search warning translation\n"
