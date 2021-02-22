@@ -24,6 +24,8 @@ Folder | Script | Description
 
 // ./adminer-4-sqlite3.php
 
+$_GET['sqlite'] = '';
+
 function adminer_object() {
 
    require "./plugins/fc-sqlite-connection-without-credentials.php";
@@ -165,6 +167,8 @@ Dossier | Script | Description
 <?php 
 
 // ./adminer-4-sqlite3.php
+
+$_GET['sqlite'] = '';
 
 function adminer_object() {
 
