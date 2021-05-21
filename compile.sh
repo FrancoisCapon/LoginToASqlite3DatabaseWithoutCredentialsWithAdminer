@@ -8,12 +8,8 @@ LANGUAGES_DIR="adminer/adminer/lang"
 TRANSLATIONS_FILE="warning-translations.csv" 
 CSS_FILE="adminer/adminer/static/default.css"
 DESIGNS_DIR="adminer/designs"
-# COMPILE_CMD="../php-80/php adminer/compile.php sqlite"
-COMPILE_CMD="../php-74/php adminer/compile.php sqlite"
-# COMMIT_VERSION="190146672f6ce9b8f08af2d7e7a5e8f768d32ee6" # 4.7.8
-# 4.8.1-dev SQLite: Fix displayed types (bug #784, regression from 4.8.0)
-# https://github.com/vrana/adminer/commit/7f8c93a6f1e564ee4a9eb81cc89a3a9a6581a667
-COMMIT_VERSION="7f8c93a6f1e564ee4a9eb81cc89a3a9a6581a667" # 4.8.1-dev
+COMPILE_CMD="php adminer/compile.php sqlite"
+COMMIT_VERSION="v4.8.1"
 
 step=1
 if [ ! -d "adminer" ]
