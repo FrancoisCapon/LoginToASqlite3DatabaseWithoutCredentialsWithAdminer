@@ -9,7 +9,7 @@ TRANSLATIONS_FILE="warning-translations.csv"
 CSS_FILE="adminer/adminer/static/default.css"
 DESIGNS_DIR="adminer/designs"
 COMPILE_CMD="php adminer/compile.php sqlite"
-COMMIT_VERSION="v4.8.4"
+COMMIT_VERSION="v4.17.1"
 
 step=1
 if [ ! -d "adminer" ]
@@ -17,7 +17,7 @@ then
 echo -e "\n$step. Load adminer's sources:\n"
 ((step+=1))
 
-git clone --recurse-submodules https://github.com/adminerevo/adminerevo.git adminer
+git clone --recurse-submodules https://github.com/vrana/adminer.git adminer
 
 cd adminer
 git reset --hard $COMMIT_VERSION
