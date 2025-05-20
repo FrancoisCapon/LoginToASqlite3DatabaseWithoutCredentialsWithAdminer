@@ -9,9 +9,9 @@ This plugin for the Web application [Adminer](https://www.adminer.org/en/) allow
 > * it gives access to all the SQLite3 databases accessible by the PHP script instance
 > * it allows you to create a SQLite3 database anywhere in the file system tree that can be accessed by the PHP script instance
 
-## :construction_worker: Install or :robot: Use compiled release or :gear: Compile
+## :construction_worker: Install `or` :robot: Use compiled release `or` :gear: Compile
 
-### :construction_worker: Install the plugin
+### :arrow_forward: Install the plugin :construction_worker:
 The plugin is used like any other [Adminer plugins](https://www.adminer.org/en/plugins/), that is to say that it requires the following files:
 
 Folder | Script | Description
@@ -19,9 +19,9 @@ Folder | Script | Description
 ```./adminer-plugins```|```fc-sqlite-connection-without-credentials.php```|the plugin itself
 ```./```|```adminer-current.php```|the current version of adminer 5.x.x
 
-### :robot: Use the [latest compiled releases](https://github.com/FrancoisCapon/LoginToASqlite3DatabaseWithoutCredentialsWithAdminer/releases/latest)
+### :arrow_forward: Use the [latest compiled releases](https://github.com/FrancoisCapon/LoginToASqlite3DatabaseWithoutCredentialsWithAdminer/releases/latest) :robot:
 
-### :gear: Compile a single file version
+### :arrow_forward: Compile a single file version :gear:
 
 This script is used to *compile* a SQLite3 "dedicated" Adminer file:
 
