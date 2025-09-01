@@ -1,6 +1,6 @@
 ## Adminer plugin to login to a SQLite3 database without credentials
 
-#### :file_folder: versions for Adminer v4.x.x are in 4.x--1.x branch
+#### :file_folder: versions for Adminer v4.x.x are in [4.x--1.x branch](https://github.com/FrancoisCapon/LoginToASqlite3DatabaseWithoutCredentialsWithAdminer/tree/4.x--1.x)
 ### :new: Adminer v5.x.x is now supported
 
 This plugin for the Web application [Adminer](https://www.adminer.org/en/) allows you to "connect to a database server [SQLite3](https://www.sqlite.org/index.html)" without the need to provide credentials **(no username and no password)**.
