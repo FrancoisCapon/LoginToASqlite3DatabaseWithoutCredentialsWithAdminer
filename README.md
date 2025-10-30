@@ -19,7 +19,7 @@ Folder | Script | Description
 ```./adminer-plugins```|```fc-sqlite-connection-without-credentials.php```|the plugin itself
 ```./```|```adminer-current.php```|the current version of adminer 5.x.x
 
-### :arrow_forward: Use the [latest compiled releases](https://github.com/FrancoisCapon/LoginToASqlite3DatabaseWithoutCredentialsWithAdminer/releases/latest) :robot:
+### :arrow_forward: Use the [latest compiled releases based on Adminer 5.4.1](https://github.com/FrancoisCapon/LoginToASqlite3DatabaseWithoutCredentialsWithAdminer/releases/latest) :robot:
 
 ### :arrow_forward: Compile a single file version :gear:
 
