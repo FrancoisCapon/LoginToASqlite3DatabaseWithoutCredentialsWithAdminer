@@ -14,7 +14,8 @@ CSS_FILE="adminer/adminer/static/default.css"
 COMPILE_CMD="php adminer/compile.php sqlite"
 # COMMIT_VERSION="v4.17.1"
 # COMMIT_VERSION="v5.3.0"
-COMMIT_VERSION="v5.4.1"
+# COMMIT_VERSION="v5.4.1"
+COMMIT_VERSION="v5.4.2"
 
 step=1
 if [ ! -d "adminer" ]
