@@ -1,13 +1,25 @@
 ## Adminer plugin to login to a SQLite3 database without credentials
 
-#### :file_folder: versions for Adminer v4.x.x are in [4.x--1.x branch](https://github.com/FrancoisCapon/LoginToASqlite3DatabaseWithoutCredentialsWithAdminer/tree/4.x--1.x)
-### :new: Adminer v5.x.x is now supported
-
 This plugin for the Web application [Adminer](https://www.adminer.org/en/) allows you to "connect to a database server [SQLite3](https://www.sqlite.org/index.html)" without the need to provide credentials **(no username and no password)**.
 
 > :warning: This plugin should not be used in a production environment:
 > * it gives access to all the SQLite3 databases accessible by the PHP script instance
 > * it allows you to create a SQLite3 database anywhere in the file system tree that can be accessed by the PHP script instance
+
+### :arrow_forward: Releases
+
+Adminer | Plugin | Realease | Note
+:---: | :---: | :--- | ---
+5.4.2| 2.0 | [5.4.2--2.0](https://github.com/FrancoisCapon/LoginToASqlite3DatabaseWithoutCredentialsWithAdminer/releases/tag/5.4.2--2.0)
+5.4.1| 2.0 | [5.4.1--2.0](https://github.com/FrancoisCapon/LoginToASqlite3DatabaseWithoutCredentialsWithAdminer/releases/tag/5.4.1--2.0)
+5.3.0 | 2.0 | [5.3.0--2.0](https://github.com/FrancoisCapon/LoginToASqlite3DatabaseWithoutCredentialsWithAdminer/releases/tag/5.3.0--2.0) | 
+|||| **Adminer v5.x.x is now supported**
+||||Adminer v4.x.x are in [4.x--1.x branch](https://github.com/FrancoisCapon/LoginToASqlite3DatabaseWithoutCredentialsWithAdminer/tree/4.x--1.x)
+4.17.1 | 1.1 | [4.17.1--1.1](https://github.com/FrancoisCapon/LoginToASqlite3DatabaseWithoutCredentialsWithAdminer/releases/tag/4.17.1--1.1)
+4.8.1 | 1.1 | [4.8.1--1.1](https://github.com/FrancoisCapon/LoginToASqlite3DatabaseWithoutCredentialsWithAdminer/releases/tag/4.8.1--1.1) | Bug with PHP 8.0 and the SQL command page: [vrana/adminer/pull/429](https://github.com/vrana/adminer/pull/429)
+4.7.8 | 1.1 | [4.7.8--1.1](https://github.com/FrancoisCapon/LoginToASqlite3DatabaseWithoutCredentialsWithAdminer/releases/tag/4.7.8--1.1)
+4.7.7 | 1.1 | [4.7.7--1.1](https://github.com/FrancoisCapon/LoginToASqlite3DatabaseWithoutCredentialsWithAdminer/releases/tag/4.7.7--1.1)
+4.7.6 | 1.0 | [4.7.6--1.0](https://github.com/FrancoisCapon/LoginToASqlite3DatabaseWithoutCredentialsWithAdminer/releases/tag/4.7.6--1.0)
 
 ## :construction_worker: Install `or` :robot: Use compiled release `or` :gear: Compile
 
@@ -19,7 +31,7 @@ Folder | Script | Description
 ```./adminer-plugins```|```fc-sqlite-connection-without-credentials.php```|the plugin itself
 ```./```|```adminer-current.php```|the current version of adminer 5.x.x
 
-### :arrow_forward: Use the [latest compiled releases based on Adminer 5.4.1](https://github.com/FrancoisCapon/LoginToASqlite3DatabaseWithoutCredentialsWithAdminer/releases/latest) :robot:
+### :arrow_forward: Use the [latest compiled releases based on Adminer 5.4.2](https://github.com/FrancoisCapon/LoginToASqlite3DatabaseWithoutCredentialsWithAdminer/releases/latest) :robot:
 
 ### :arrow_forward: Compile a single file version :gear:
 
