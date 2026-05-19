@@ -8,7 +8,7 @@ This plugin for the Web application [Adminer](https://www.adminer.org/en/) allow
 
 ### :arrow_forward: Releases
 
-Adminer | Plugin | Realease | Note
+Adminer | Plugin | Release | Note
 :---: | :---: | :--- | ---
 5.4.2| 2.0 | [5.4.2--2.0](https://github.com/FrancoisCapon/LoginToASqlite3DatabaseWithoutCredentialsWithAdminer/releases/tag/5.4.2--2.0)
 5.4.1| 2.0 | [5.4.1--2.0](https://github.com/FrancoisCapon/LoginToASqlite3DatabaseWithoutCredentialsWithAdminer/releases/tag/5.4.1--2.0)
